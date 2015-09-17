@@ -1,0 +1,35 @@
+{
+  "name": "parse-yuf",
+  "version": "0.1.0",
+  "description": "An awesome module being created",
+  "main": "index.js",
+  "scripts": {
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/akileez/parse-yuf.git"
+  },
+  "author": {
+    "name": "Keith Williams",
+    "email": "git@keeda.net",
+    "url": "https://github.com/akileez/parse-yuf"
+  },
+  "homepage": "https://github.com/akileez/parse-yuf",
+  "bugs": {
+    "url": "https://github.com/akileez/parse-yuf/issues"
+  },
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "files": [
+    "LICENSE",
+    "index.js",
+    "README.md"
+  ]
+}
