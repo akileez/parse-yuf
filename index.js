@@ -19,7 +19,7 @@ function parse (input, opts, cb) {
     if (err) return cb(err)
     var fm = extract(res)
 
-    cb(null, opts.extend ? extend(res, input) : res)
+    cb(null, opts.extend ? extend(fm, input) : fm)
   })
 }
 
