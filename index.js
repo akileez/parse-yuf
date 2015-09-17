@@ -6,8 +6,8 @@
  */
 
 var fs      = require('fs')
-var path    = require('path')
 var extract = require('yufrontin')
+var pstats  = require('./lib/pstats')
 
 function parse (input, opts, cb) {
   if (typeof opts === 'function') {
@@ -35,7 +35,7 @@ function extend (obj, fp) {
   return {
     abs     : fs.realpathSync(fp),
     rel     : fp,
-    file    : path.parse(fp),
+    file    : pstats(fp),
     stats   : fs.lstatSync(fp),
     data    : obj.data,
     content : obj.content
