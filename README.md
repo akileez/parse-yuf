@@ -4,6 +4,8 @@
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Downloads][downloads-image]][downloads-url]
 
+> Parse front matter extracted from yufrontin
+
 ## Installation
 ```bash
 $ npm install akileez\parse-yuf
