@@ -7,7 +7,7 @@
 
 var fs      = require('fs')
 var extract = require('yufrontin')
-var pstats  = require('./lib/pstats')
+var pstats  = require('lib/pstats')
 
 function parse (input, opts, cb) {
   if (typeof opts === 'function') {
