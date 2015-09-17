@@ -12,14 +12,84 @@ $ npm install akileez\parse-yuf
 ```
 
 ## Usage
-```js
+file: kmx/test/one.hbs
 
+```handlebars
+---
+title: one
+layout: default
+description: This is a test. This is only a test
+tags: ['apple', 'orange', 'pear']
+---
+
+This is one.
+```
+
+```js
+var parsefm = require('parse-yuf')
+
+var syncExtend = parsefm.sync('kmx/test/one.hbs', {extend: true})
+console.log(syncExtend)
+// or
+parsefm('kmx/test/one.hbs', {extend: true}, function (err, res) {
+  assert.ifError(err)
+  console.log(res)
+})
+
+// results in -->
+{ abs: '/Volumes/BigStor/Developer/web/sites/testproj949/kmx/test/one.hbs',
+  rel: 'kmx/test/one.hbs',
+  file:
+   { root: '',
+     dir: 'kmx/test',
+     base: 'one.hbs',
+     ext: '.hbs',
+     name: 'one' },
+  stats:
+   { dev: 16777242,
+     mode: 33188,
+     nlink: 1,
+     uid: 501,
+     gid: 20,
+     rdev: 0,
+     blksize: 4096,
+     ino: 3441487,
+     size: 137,
+     blocks: 16,
+     atime: Thu Sep 17 2015 09:22:26 GMT-0400 (EDT),
+     mtime: Tue Sep 15 2015 12:33:08 GMT-0400 (EDT),
+     ctime: Tue Sep 15 2015 12:33:08 GMT-0400 (EDT),
+     birthtime: Tue Sep 01 2015 17:02:30 GMT-0400 (EDT) },
+  data:
+   { title: 'one',
+     layout: 'default',
+     description: 'This is a test. This is only a test',
+     tags: [ 'apple', 'orange', 'pear' ] },
+  content: '\nThis is one.\n' }
+
+//////// Example #2 /////////
+
+var syncPlain = parsefm.sync('kmx/test/one.hbs')
+console.log(syncPlain)
+// or
+parsefm('kmx/test/one.hbs', function (err, res) {
+  assert.ifError(err)
+  console.log(res)
+})
+
+// results in -->
+{ data:
+   { title: 'one',
+     layout: 'default',
+     description: 'This is a test. This is only a test',
+     tags: [ 'apple', 'orange', 'pear' ] },
+  content: '\nThis is one.\n' }
 ```
 
 ## API
-```js
 
-```
+#### `parse(filepath[, options], callback)`
+#### `parse.sync(filepath[, options])`
 
 ## Why?
 
