@@ -1,6 +1,6 @@
 {
   "name": "parse-yuf",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Parse front matter extracted from yufrontin",
   "main": "index.js",
   "scripts": {},
@@ -29,6 +29,7 @@
   "files": [
     "LICENSE",
     "index.js",
-    "README.md"
+    "README.md",
+    "lib"
   ]
 }
