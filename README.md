@@ -40,7 +40,7 @@ parsefm('kmx/test/one.hbs', {extend: true}, function (err, res) {
 { abs: '/Volumes/BigStor/Developer/web/sites/testproj949/kmx/test/one.hbs',
   rel: 'kmx/test/one.hbs',
   file:
-   { root: '',
+   { root: 'testproj949',
      dir: 'kmx/test',
      base: 'one.hbs',
      ext: '.hbs',
