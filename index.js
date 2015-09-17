@@ -16,8 +16,7 @@ function parse (input, opts, cb) {
   }
 
   fs.readFile(input, 'utf8', function (err, res) {
-    if (err) return cb(err, res)
-
+    if (err) return cb(err)
     var fm = extract(res)
 
     cb(null, opts.extend ? extend(res, input) : res)
