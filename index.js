@@ -9,28 +9,38 @@ var fs      = require('fs')
 var path    = require('path')
 var extract = require('yufrontin')
 
-function parse (input, cb) {
+function parse (input, opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
+
   fs.readFile(input, 'utf8', function (err, res) {
     if (err) return cb(err, res)
 
     var fm = extract(res)
 
-    cb(null, {
-      abs     : fs.realpathSync(input),
-      rel     : input,
-      file    : path.parse(input),
-      stats   : fs.lstatSync(input),
-      data    : fm.data,
-      content : fm.content
-    })
+    cb(null, opts.extend ? extend(res, input) : res)
   })
 }
 
-function parseSync (input) {
+function parseSync (input, opts) {
+  opts = opts || {}
   var str = fs.readFileSync(input, 'utf8')
   var fm = extract(str)
 
-  return fm
+  return opts.extend ? extend(fm, input) : fm
+}
+
+function extend (obj, fp) {
+  return {
+    abs     : fs.realpathSync(fp),
+    rel     : fp,
+    file    : path.parse(fp),
+    stats   : fs.lstatSync(fp),
+    data    : obj.data,
+    content : obj.content
+  }
 }
 
 module.exports = parse
