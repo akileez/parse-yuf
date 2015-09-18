@@ -1,7 +1,7 @@
 # parse-yuf
 [![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+[![schoolmarm-standard-style][marm-image]][marm-url]
+[![experimental][stability-image]][stability-url]
 [![Downloads][downloads-image]][downloads-url]
 
 > Parse front matter extracted from yufrontin
@@ -102,9 +102,9 @@ parsefm('kmx/test/one.hbs', function (err, res) {
 
 [npm-image]: https://img.shields.io/npm/v/parse-yuf.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/parse-yuf
-[travis-image]: https://img.shields.io/travis/akileez/parse-yuf.svg?style=flat-square
-[travis-url]: https://travis-ci.org/akileez/parse-yuf
-[coveralls-image]: https://img.shields.io/coveralls/akileez/parse-yuf.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/akileez/parse-yuf?branch=master
+[marm-image]: https://img.shields.io/badge/code%20style-marm-brightgreen.svg?style=flat-square
+[marm-url]: https://github.com/akileez/eslint-config-marm
+[stability-image]: https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square
+[stability-url]: https://github.com/akileez/parse-yuf
 [downloads-image]: http://img.shields.io/npm/dm/parse-yuf.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/parse-yuf
