@@ -1,6 +1,6 @@
 {
   "name": "parse-yuf",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Parse front matter extracted from yufrontin",
   "main": "index.js",
   "scripts": {},
@@ -23,7 +23,7 @@
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "yufrontin": "akileez/yufrontin"
+    "yufrontin": "^0.1.6"
   },
   "devDependencies": {},
   "files": [
