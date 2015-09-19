@@ -25,6 +25,8 @@ tags: ['apple', 'orange', 'pear']
 This is one.
 ```
 
+extended options: sync and async versions
+
 ```js
 var parsefm = require('parse-yuf')
 
@@ -66,9 +68,11 @@ parsefm('kmx/test/one.hbs', {extend: true}, function (err, res) {
      description: 'This is a test. This is only a test',
      tags: [ 'apple', 'orange', 'pear' ] },
   content: '\nThis is one.\n' }
+```
 
-//////// Example #2 /////////
+vanilla readFile sync and async versions:
 
+```js
 var syncPlain = parsefm.sync('kmx/test/one.hbs')
 console.log(syncPlain)
 // or
