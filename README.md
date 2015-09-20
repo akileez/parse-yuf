@@ -8,7 +8,7 @@
 
 ## Installation
 ```bash
-$ npm install akileez\parse-yuf
+$ npm install parse-yuf
 ```
 
 ## Usage
