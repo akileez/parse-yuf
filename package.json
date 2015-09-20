@@ -1,6 +1,6 @@
 {
   "name": "parse-yuf",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Parse front matter extracted from yufrontin",
   "main": "index.js",
   "scripts": {},
@@ -21,9 +21,27 @@
     "url": "https://github.com/akileez/parse-yuf/issues"
   },
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "parse",
+    "front",
+    "matter",
+    "front-matter",
+    "read",
+    "yaml",
+    "yml",
+    "yfm",
+    "yamljs",
+    "extract",
+    "extend",
+    "expand",
+    "meta",
+    "data",
+    "metadata",
+    "path",
+    "stats"
+  ],
   "dependencies": {
-    "yufrontin": "^0.1.6"
+    "yufrontin": "^0.1.7"
   },
   "devDependencies": {},
   "files": [
